@@ -1,6 +1,8 @@
 package com.test.books.ui.presenter.create
 
+import android.app.Activity
 import android.content.Intent
+import android.view.inputmethod.InputMethodManager
 import com.test.books.business.usecase.base.BaseSubscriber
 import com.test.books.business.usecase.books.CreateBookUseCase
 import com.test.books.data.model.Book
@@ -10,7 +12,6 @@ import com.test.books.ui.presenter.base.Presenter
 import com.test.books.ui.utils.AppImagePickerManager
 import com.test.books.ui.utils.IOPickerImageSelector
 import com.test.books.ui.view.IONavigation
-
 
 
 class CreateBookPresenter(appNavigation: IONavigation,
@@ -32,14 +33,14 @@ class CreateBookPresenter(appNavigation: IONavigation,
     var title: String? = null
         set(value) {
             field = value
-            if (!value.isNullOrEmpty()) {
+            if (value != null && !value.isEmpty()) {
                 view.hideTitleError()
             }
         }
     var author: String? = null
         set(value) {
             field = value
-            if (!value.isNullOrEmpty()) {
+            if (value != null && !value.isEmpty()) {
                 view.hideAuthorError()
             }
         }
@@ -47,7 +48,7 @@ class CreateBookPresenter(appNavigation: IONavigation,
     var price: String? = null
         set(value) {
             field = value
-            if (!value.isNullOrEmpty()) {
+            if (value != null && !value.isEmpty()) {
                 view.hidePriceError()
             }
         }
@@ -73,6 +74,9 @@ class CreateBookPresenter(appNavigation: IONavigation,
     }
 
     fun createBook() {
+        val imm = view.activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.activity.getCurrentFocus()!!.getWindowToken(), 0)
+
         if (title == null) {
             view.showTitleError()
             return
