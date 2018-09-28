@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BaseEditText">
+        <attr name="backgroundFocused" format="reference"/>
+        <attr name="backgroundUnFocused" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="EditTextForm">
+        <attr name="form_background" format="reference"/>
+        <attr name="form_background_no_focused" format="reference"/>
+        <attr name="form_error_message" format="string"/>
+        <attr name="form_hint" format="string"/>
+        <attr name="form_imputType" format="enum">
+            <enum name="text" value="0"/>
+            <enum name="password" value="1"/>
+            <enum name="emails" value="2"/>
+            <enum name="date" value="3"/>
+            <enum name="phone" value="4"/>
+            <enum name="multiline" value="5"/>
+            <enum name="numberDecimal" value="6"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/book_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/detail_image_size"
+                android:scaleType="center"
+                android:background="@color/colorAccent"
+                app:layout_constraintBottom_toTopOf="@+id/book_title_il"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <ImageButton
+                android:id="@+id/camera_bt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_mediun"
+                android:layout_marginRight="@dimen/margin_mediun"
+                android:background="@drawable/background_red_thumb"
+                android:src="@drawable/imagepicker_ic_camera"
+                app:layout_constraintBottom_toBottomOf="@id/book_iv"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/book_title_il"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_mediun"
+                android:layout_marginLeft="@dimen/margin_mediun"
+                android:layout_marginRight="@dimen/margin_mediun"
+                android:layout_marginStart="@dimen/margin_mediun"
+                android:layout_marginTop="@dimen/margin_mediun"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="@+id/book_iv"
+                app:layout_constraintStart_toStartOf="@+id/book_iv"
+                app:layout_constraintTop_toBottomOf="@+id/book_iv">
+
+                <EditText
+                    android:id="@+id/book_title_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/create_title_hint"
+                    android:inputType="textPersonName" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/book_author_il"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_mediun"
+                android:layout_marginLeft="@dimen/margin_mediun"
+                android:layout_marginRight="@dimen/margin_mediun"
+                android:layout_marginStart="@dimen/margin_mediun"
+                android:layout_marginTop="@dimen/margin_small"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_title_il">
+
+                <EditText
+                    android:id="@+id/book_author_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/create_author_hint"
+                    android:inputType="textPersonName" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/book_price_il"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_mediun"
+                android:layout_marginLeft="@dimen/margin_mediun"
+                android:layout_marginRight="@dimen/margin_mediun"
+                android:layout_marginStart="@dimen/margin_mediun"
+                android:layout_marginTop="@dimen/margin_small"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_author_il">
+
+                <EditText
+                    android:id="@+id/book_price_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/create_price_hint"
+                    android:inputType="numberDecimal" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</merge>

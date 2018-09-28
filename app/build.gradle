@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply from: '../config/dependencies.gradle'
+//apply plugin: 'dart.henson-plugin'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.test.books"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ 'dart.henson.package' : 'ec.test.music.ui.view' ]
+            }
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    kapt {
+        generateStubs = true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // Kotlin
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // android support
+    compile support_appcompat
+    compile support_design
+    compile support_constraints
+    compile support_cardview
+    compile support_recyclerview
+    compile support_multidex
+
+    // Dagger
+    compile dagger
+    kapt dagger_compiler
+    provided javax_annotations
+
+    //Rx
+    compile reactivex
+    compile reactivex_android
+
+    //Retrofit
+    compile retrofit
+    compile retrofit_converter
+    compile retrofit_rx_adapter
+    compile okhttp3_logger
+
+    //Picasso
+    compile picasso
+
+    //Dart
+    implementation dart
+    kapt dart_processor
+    implementation henson
+    kapt henson_processor
+
+    // butter_knife
+    compile butter_knife
+    kapt butter_knife_compiler
+
+    //Image picker
+    implementation image_picker
+
+    //Timber
+    implementation timber
+
+    // Test
+    testImplementation junit
+    testImplementation powermock
+    testImplementation powermock_mockito
+    testImplementation powermock_junit
+    androidTestImplementation annotations
+    androidTestImplementation espresso
+    androidTestImplementation test_runner
+    androidTestImplementation test_rules
+    androidTestImplementation daggermock
+    androidTestImplementation mockito
+}
+repositories {
+    mavenCentral()
+}

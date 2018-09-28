@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minHeight="@dimen/row_size"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_mediun"
+        android:layout_marginEnd="@dimen/margin_mediun"
+        android:layout_marginLeft="@dimen/margin_mediun"
+        android:layout_marginRight="@dimen/margin_mediun"
+        android:layout_marginStart="@dimen/margin_mediun"
+        android:layout_marginTop="@dimen/margin_mediun"
+        android:gravity="left"
+        android:text="title"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_big"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/bookIv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/detail_image_size"
+                android:background="@color/colorAccent"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bookPriceTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_mediun"
+                android:layout_marginBottom="@dimen/margin_mediun"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/bookIv"
+                android:textSize="@dimen/margin_big"
+                android:background="@drawable/background_red_thumb"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/bookTitleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/bookDescritionTv"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginRight="@dimen/margin_mediun"
+                android:layout_marginLeft="@dimen/margin_mediun"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/bookIv" />
+
+            <TextView
+                android:id="@+id/bookDescritionTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginRight="@dimen/margin_mediun"
+                android:layout_marginLeft="@dimen/margin_mediun"
+                app:layout_constraintTop_toBottomOf="@+id/bookTitleTv" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <com.test.books.ui.view.customviews.LoaderView
+        android:id="@+id/progress_lv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/loader_size"
+        android:indeterminate="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+</merge>

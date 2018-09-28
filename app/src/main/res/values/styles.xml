@@ -1,0 +1,68 @@
+<resources>
+
+    <style name="ThemeToolbar" parent="Theme.AppCompat.Light">
+        <!-- Tool bar background -->
+        <item name="android:background">@android:color/transparent</item>
+        <!-- navigation icon color -->
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="colorControlHighlight">@android:color/white</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <!--<item name="colorPrimary">@color/tinker</item>-->
+        <item name="colorPrimaryDark">@android:color/holo_blue_dark</item>
+        <!-- Subtitle color -->
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <!-- Title color-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:displayOptions">showHome|homeAsUp|showTitle</item>
+    </style>
+
+    <!-- Popup style-->
+
+    <style name="PopupMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/ThemeToolbar</item>
+        <item name="android:popupMenuStyle">@style/PopupMenuStyle</item>
+
+    </style>
+
+    <!-- Splash theme -->
+    <style name="BrandedLaunch" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <!-- Toolbar theme -->
+    <style name="ThemeToolbarItemsWhiteStyle" parent="AppTheme">
+        <!-- navigation icon color -->
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <!-- Subtitle color -->
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <!-- Title color-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- buttons text color-->
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="ToolBarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="contentInsetRight">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="contentInsetLeft">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="layout_scrollFlags">scroll|enterAlways</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+</resources>

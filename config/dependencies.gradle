@@ -1,0 +1,95 @@
+ext {
+
+    //Versions
+    support_version = '27.1.1'
+    constraint_version = '1.0.2'
+    play_services_version = '11.0.4'
+    play_messaging_version = '10.2.6'
+    dagger_version = '2.9'
+    javax_annotations_version = '1.0'
+    timber_version = '1.5.1'
+    butterknife_version = '8.7.0'
+    gson_version = '1.7.2'
+    exp_recyclerview_version = '2.1.1'
+    java_annotations_version = '15.0'
+    reactivex_version = '1.2.1'
+    reactivex_android_version = '1.1.6'
+    retrofit_version = '2.1.0'
+    picasso_version = '2.5.2'
+    okhttp3_logger_version = '3.4.1'
+    dart_version = "2.0.1"
+    butter_knife_version = "8.7.0"
+    multidex_version = '1.0.1'
+    junit_version = '4.12'
+    powermock_version = '1.7.3'
+    espresso_version = '3.0.2'
+    test_runner_version = '1.0.2'
+    test_rules_version = '1.0.2'
+    daggermock_version = '0.8.4'
+    mockito_version = '2.19.0'
+    image_picker_version = '1.3.0'
+
+    //Dependencies
+
+    //Android
+    support_appcompat = "com.android.support:appcompat-v7:${support_version}"
+    support_design = "com.android.support:design:${support_version}"
+    support_support = "com.android.support:support-v4:${support_version}"
+    support_cardview = "com.android.support:cardview-v7:${support_version}"
+    support_recyclerview = "com.android.support:recyclerview-v7:${support_version}"
+    support_constraints = "com.android.support.constraint:constraint-layout:${constraint_version}"
+    support_multidex = "com.android.support:multidex:${multidex_version}"
+
+    //Dagger
+    dagger_compiler = "com.google.dagger:dagger-compiler:${dagger_version}"
+    dagger = "com.google.dagger:dagger:${dagger_version}"
+    javax_annotations = "javax.annotation:jsr250-api:${javax_annotations_version}"
+
+    //Butterknife
+    butterknife_compiler = "com.jakewharton:butterknife-compiler:${butterknife_version}"
+    butterknife = "com.jakewharton:butterknife:${butterknife_version}"
+
+    //Gson
+    gson = "com.google.code.gson:gson:${gson_version}"
+
+    //ReactiveX
+    reactivex = "io.reactivex:rxandroid:${reactivex_version}"
+    reactivex_android = "io.reactivex:rxjava:${reactivex_android_version}"
+
+    //Retrofit
+    retrofit = "com.squareup.retrofit2:retrofit:${retrofit_version}"
+    retrofit_rx_adapter = "com.squareup.retrofit2:adapter-rxjava:${retrofit_version}"
+    retrofit_converter = "com.squareup.retrofit2:converter-gson:${retrofit_version}"
+    okhttp3_logger = "com.squareup.okhttp3:logging-interceptor:${okhttp3_logger_version}"
+
+    //Picasso
+    picasso = "com.squareup.picasso:picasso:${picasso_version}"
+
+    //Dart
+    dart = "com.f2prateek.dart:dart:${dart_version}"
+    dart_processor = "com.f2prateek.dart:dart-processor:${dart_version}"
+    henson = "com.f2prateek.dart:henson:${dart_version}"
+    henson_processor = "com.f2prateek.dart:henson-processor:${dart_version}"
+
+    // ButterKnife
+    butter_knife =  "com.jakewharton:butterknife:${butter_knife_version}"
+    butter_knife_compiler = "com.jakewharton:butterknife-compiler:${butter_knife_version}"
+
+    //Image Picker
+    image_picker = "com.github.nguyenhoanglam:ImagePicker:${image_picker_version}"
+
+    //Timber
+    timber = "com.github.ajalt:timberkt:${timber_version}"
+
+    // Tests
+    junit = "junit:junit:${junit_version}"
+    annotations = "com.android.support:support-annotations:${support_version}"
+    powermock = "org.powermock:powermock-core:${powermock_version}"
+    powermock_mockito = "org.powermock:powermock-api-mockito2:${powermock_version}"
+    powermock_junit = "org.powermock:powermock-module-junit4:${powermock_version}"
+    espresso = "com.android.support.test.espresso:espresso-core:${espresso_version}"
+    test_runner = "com.android.support.test:runner:${test_runner_version}"
+    test_rules = "com.android.support.test:rules:${test_rules_version}"
+    daggermock = "com.github.fabioCollini.daggermock:daggermock:${daggermock_version}"
+    mockito = "org.mockito:mockito-android:${mockito_version}"
+}

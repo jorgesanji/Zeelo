@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Books</string>
+    <string name="title_home">Books</string>
+    <string name="title_add">Add a book</string>
+    <string name="title_create">New book</string>
+    <string name="create_title_hint">Book title</string>
+    <string name="create_author_hint">Author name</string>
+    <string name="create_price_hint">Book price</string>
+    <string name="error_internet_connection">An internet connection error has occurred please try again later</string>
+    <!-- PICKER -->
+    <string name="picker_title">"Galeria"</string>
+    <string name="picker_select_images">"Presiona para seleccionar la imagen"</string>
+    <string name="picker_selected_images">"Seleccionadas"</string>
+    <string name="action_done">"DONE"</string>
+    <string name="max_images_picked">You can\'t select more than %d images</string>
+    <string name="action_camera_title">CAMERA</string>
+    <string name="action_gallery_title">GALLERY</string>
+
+    <!-- Error -->
+    <string name="create_book_title_error">title no valid</string>
+    <string name="create_book_author_error">author no valid</string>
+    <string name="create_book_price_error">price no valid</string>
+
+    <string name="create_book_success">Book proper created</string>
+</resources>
